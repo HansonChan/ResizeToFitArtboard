@@ -2,8 +2,6 @@
 function ResizeToFitArtboard(context) {
 
   var sketch = context.api()
-  sketch.log("resizeToFitArtboard:Sketch version is " + sketch.version)
-  sketch.log("resizeToFitArtboard:Sketch API version is " + sketch.api_version)
 
   var document = sketch.selectedDocument
   var page = document.currentPage
@@ -43,8 +41,6 @@ function ResizeToFitArtboard(context) {
   //calculate offset
   offset_x = layer_x
   offset_y = layer_y
-  log("resizeToFitArtboard: offset_x" + offset_x);
-  log("resizeToFitArtboard: offset_y" + offset_y);
 
   //do resizing
   resizeAllLayerByScale(selectedArtboard, rate, offset_x, offset_y)
@@ -58,7 +54,6 @@ function resizeAllLayerByScale(artboard, rate, offset_x, offset_y){
 
   for (i=0;i<layers.length;i++){
     var layer = layers[i];
-    log("resizeToFitArtboard: layer i " + layer)
 
     // Do not resize artboard
     if (layer.parentGroup().className() == 'MSArtboardGroup'){
@@ -66,20 +61,13 @@ function resizeAllLayerByScale(artboard, rate, offset_x, offset_y){
         var layer_offset_x = layer.frame().minX() - offset_x
         var layer_offset_y = layer.frame().minY() - offset_y
 
-        log("resizeToFitArtboard: layer parent " +layer.parentGroup().className())
-        log("resizeToFitArtboard: layer i offset x " + layer_offset_x)
-        log("resizeToFitArtboard: layer i offset y " + layer_offset_y)
 
         var frame = layer.frame();
         layer.frame().setX(rate * layer_offset_x);
-        log("resizeToFitArtboard: layer move xto " + rate * (frame.x() - layer_offset_x));
         layer.frame().setY(rate * layer_offset_y);
-        log("resizeToFitArtboard: layer move yto " + rate * (frame.y() - layer_offset_y));
         layer.constrainProportions = true;
         layer.setWidthRespectingProportions(frame.width() * rate);
         //layer.setHeightRespectingProportions(frame.height() * rate);
-        log("resizeToFitArtboard: resize rate:" + rate)
-        log("resizeToFitArtboard: layer result:" + layer.frame())
     }
   }
 }
