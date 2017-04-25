@@ -1,10 +1,12 @@
 {
     "name": "ResizeToFitArtboard",
     "identifier": "com.shuai.ResizeToFitArtboard",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Resize selected Layers to fit artboard size.",
+    "homepage": "https://github.com/HansonChan/ResizeToFitArtboard",
     "authorEmail": "chenshuai@gmail.com",
     "author": "Shuai",
+    "updateURL": "https://github.com/HansonChan/ResizeToFitArtboard.git",
     "commands": [
         {
         "script": "ResizeToFitArtboard.js",
