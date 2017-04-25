@@ -10,4 +10,4 @@ This plugin is made for resizing selected layers to fit artboard size.
 1. Select layers or groups. (I suggest to group them together)
 2. Choose from plugin menu or user shortcut “ Command + Shift +X” (Because X looks like a expand to fullscreen icon) .
 
-[![Install PLUGIN NAME with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install PLUGIN NAME with Sketchpacks")](https://sketchpacks.com/YOUR_NAME/PLUGIN_NAME/install)
+[![Install PLUGIN NAME with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install ResizeToFitArtboard with Sketchpacks")](https://sketchpacks.com/HansonChan/ResizeToFitArtboard/install)
